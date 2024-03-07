@@ -4,10 +4,6 @@ class Currency {
     this.name = name;
   }
 
-  get code() {
-    return this._code;
-  }
-
   set code(code) {
     if (typeof code !== 'string') {
       throw new TypeError('Code must be a String');
@@ -15,8 +11,8 @@ class Currency {
     this._code = code;
   }
 
-  get name() {
-    return this._name;
+  get code() {
+    return this._code;
   }
 
   set name(name) {
@@ -24,6 +20,10 @@ class Currency {
       throw new TypeError('Code must be a String');
     }
     this._name = name;
+  }
+
+  get name() {
+    return this._name;
   }
 
   displayFullCurrency() {
