@@ -17,7 +17,7 @@ class Currency {
 
   set name(name) {
     if (typeof name !== 'string') {
-      throw new TypeError('Code must be a String');
+      throw new TypeError('Name must be a String');
     }
     this._name = name;
   }
@@ -27,7 +27,7 @@ class Currency {
   }
 
   displayFullCurrency() {
-    return ` ${this._name} (${this._code})`;
+    return `${this.name} (${this.code})`;
   }
 }
 
