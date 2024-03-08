@@ -19,6 +19,9 @@ class Pricing {
   }
 
   set currency(currency) {
+    if (!(currency instanceof Currency)) {
+      throw new TypeError('Invalid currency object');
+    }
     this._currency = currency;
   }
 
